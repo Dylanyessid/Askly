@@ -47,6 +47,7 @@ class MainActivityViewModel (
     private fun checkSession() {
         viewModelScope.launch {
             val isValid = tokenManager.isSessionValid()
+            Log.d("Auth Token Valid: ", "Token: " + isValid.toString())
             if (isValid) {
                 startDestination.value = "main_graph"
             } else {

@@ -39,10 +39,10 @@ data class RegisterResponse(
 
 interface AuthApi {
 
-    @POST("api/auth/login")
+    @POST("auth/login")
     suspend fun login(@Body body: LoginRequest) : Response<ApiResponse<LoginResponse>>
 
-    @POST("api/users")
+    @POST("users")
     suspend fun register(@Body body: RegisterRequest) : Response<ApiResponse<RegisterResponse>>
 
 }

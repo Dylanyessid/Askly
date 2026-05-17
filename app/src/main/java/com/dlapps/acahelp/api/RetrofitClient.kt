@@ -17,7 +17,7 @@ object RetrofitClient {
         .addInterceptor(logging)
         .build()
 
-    private const val BASE_URL = "http://192.168.1.160:5296/"
+    private const val BASE_URL = "http://192.168.1.67:5296/api/"
 
     val api: AuthApi by lazy {
 
